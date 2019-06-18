@@ -50,8 +50,11 @@ function mergeSort(arr,l,r){
     if(l>=r)
         return;
     let mid=parseInt((l+r)/2);
+    // mid的左边递归
     mergeSort(arr,l,mid);
+    // mid的右边递归
     mergeSort(arr,mid+1,r);
+    //合并
     merge(arr,l,mid,mid+1,r);
 }
 function merge(arr,_ls,_le,_rs,_re){
